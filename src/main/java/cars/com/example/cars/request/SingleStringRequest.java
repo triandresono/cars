@@ -5,6 +5,6 @@ import lombok.Setter;
 
 @Setter
 @Getter
-public class CommonIdRequest {
-    private Long id;
+public class SingleStringRequest {
+    private String value;
 }

@@ -16,5 +16,5 @@ public class Brand {
 	private Long brand_id;
 
     @Size(max = 20)
-	private String brandName;
+	private String brand_name;
 }	

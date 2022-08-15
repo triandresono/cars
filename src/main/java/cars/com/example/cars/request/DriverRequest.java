@@ -1,19 +1,13 @@
-package cars.com.example.cars.model;
+package cars.com.example.cars.request;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
-import javax.persistence.*;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@NoArgsConstructor
-@Entity
 @Setter
 @Getter
-@Table(name = "driver_table")
-public class Driver {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class DriverRequest {
+    @NotBlank
     private Long driver_id;
 
     @NotBlank
@@ -23,10 +17,10 @@ public class Driver {
     @NotBlank
     @Size(max = 50)
     private String driver_address;
-    
-    @ManyToOne
-	@JoinColumn(name = "driver_gender", referencedColumnName = "system_code")
-	private SystemMaster driver_gender;
+
+    @NotBlank
+    @Size(max = 30)
+    private String driver_gender;
 
     @NotBlank
     @Size(max = 30)
@@ -47,5 +41,4 @@ public class Driver {
     @NotBlank
     @Size(max = 30)
     private String id_number;
-
 }

@@ -1,13 +1,17 @@
 package cars.com.example.cars.response;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.time.Instant;
 
+@NoArgsConstructor
 @Data
 public class TokenRefreshResponse {
   private String accessToken;
   private String refreshToken;
   private Instant refreshTokenExpDate;
   private String tokenType = "Bearer";
+  
 
   public TokenRefreshResponse(String accessToken, String refreshToken,Instant refreshTokenExpDate) {
     this.accessToken = accessToken;

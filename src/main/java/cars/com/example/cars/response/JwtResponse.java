@@ -1,6 +1,5 @@
 package cars.com.example.cars.response;
 import java.time.Instant;
-import java.util.List;
 
 public class JwtResponse {
 	private String token;
@@ -10,7 +9,6 @@ public class JwtResponse {
 	private String username;
 	private String email;
 	private Instant refreshTokenExpDate;
-	private List<String> roles;
 
 	public JwtResponse(String accessToken, String refreshToken, Long id, String username, String email,Instant refreshTokenExpDate) {
 		this.token = accessToken;
@@ -70,9 +68,7 @@ public class JwtResponse {
 		this.username = username;
 	}
 
-	public List<String> getRoles() {
-		return roles;
-	}
+
 
   public String getRefreshToken() {
     return refreshToken;

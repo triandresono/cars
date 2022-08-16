@@ -23,9 +23,6 @@ public class CarsApplication {
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/**").allowedOrigins("*");
 			}
- 
 		};
 	}
-
-	
 }
